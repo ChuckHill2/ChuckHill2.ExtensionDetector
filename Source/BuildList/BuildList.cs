@@ -1,14 +1,13 @@
-﻿using System;
+using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
+using Chuckhill2.Utilities;
 using ChuckHill2.ExtensionDetector;
-using DotNetResourceExtractor;
 
 namespace BuildList
 {
@@ -56,30 +55,35 @@ namespace BuildList
             var contentExtension = FileExtension.ByContent(file);
             var detectedDescription = MagicDetector.LibMagic(file, LibMagicOptions.Description);
             var namespaces = FileExtension.BuildListNamespaces(content);
-            if (namespaces.Length > (78-15))
+            var indent = "Namespaces:....".Length;
+            if (namespaces.Length > (78 - indent))
             {
+                //re-format multiple tab-delimited namespaces as newline delimited with indent
                 var arr = namespaces.Split(new char[] { '\t' }, StringSplitOptions.RemoveEmptyEntries);
                 if (arr.Length < 2) namespaces = arr[0];
                 else
                 {
                     var sb = new StringBuilder();
+                    var nl = string.Empty;
+                    var insetStr = string.Empty;
                     foreach (var ns in arr)
                     {
-                        sb.Append("\r\n               ");
+                        sb.Append(insetStr);
                         sb.Append(ns);
+                        insetStr = "\r\n"+new String(' ', indent);
                     }
                     namespaces = sb.ToString();
                 }
             }
 
-            Console.WriteLine($"File Extensn:  \"{ext}\"");
-            Console.WriteLine($"Detected Mime: \"{detectedMimeType}\"");
-            Console.WriteLine($"Detected Ext:  \"{detectedExtension}\"");
-            Console.WriteLine($"Detected Desc: \"{detectedDescription}\"");
-            Console.WriteLine($"Exten by Mime: \"{mimeExtension}\"");
-            Console.WriteLine($"Content Exten: \"{contentExtension}\"");
-            Console.WriteLine($"Namespaces:    \"{namespaces}\"");
-            Console.WriteLine($"Content:       \"{content}\"");
+            Console.WriteLine($"File Extensn:  {ext}");
+            Console.WriteLine($"Detected Mime: {detectedMimeType}");
+            Console.WriteLine($"Detected Ext:  {detectedExtension}");
+            Console.WriteLine($"Detected Desc: {detectedDescription}");
+            Console.WriteLine($"Exten by Mime: {mimeExtension}");
+            Console.WriteLine($"Content Exten: {contentExtension}");
+            Console.WriteLine($"Namespaces:    {namespaces}");
+            Console.WriteLine($"Content:       {content}");
         }
 
         /// <summary>

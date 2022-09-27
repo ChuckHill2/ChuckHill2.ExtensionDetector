@@ -1,9 +1,5 @@
-﻿using System;
-using System.IO;
-using System.Text;
-using DotNetResourceExtractor;
-using ChuckHill2.ExtensionDetector;
-using System.Diagnostics;
+using System;
+using Chuckhill2.Utilities;
 
 namespace BuildList
 {
