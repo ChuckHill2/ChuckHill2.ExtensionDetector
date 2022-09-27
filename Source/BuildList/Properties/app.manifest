@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<assembly manifestVersion="1.0" xmlns="urn:schemas-microsoft-com:asm.v1">
+  <!--<assemblyIdentity version="1.0.0.0" name="BuildList.app"/>-->
+  
+  <application xmlns="urn:schemas-microsoft-com:asm.v3">
+    <!-- Chuck; Added to allow very long file paths -->
+    <windowsSettings xmlns:ws2="http://schemas.microsoft.com/SMI/2016/WindowsSettings">
+      <ws2:longPathAware>true</ws2:longPathAware>
+    </windowsSettings>
+  </application>
+</assembly>

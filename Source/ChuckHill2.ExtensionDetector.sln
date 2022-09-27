@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32802.440
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChuckHill2.ExtensionDetector", "ChuckHill2.ExtensionDetector\ChuckHill2.ExtensionDetector.csproj", "{153D5257-A0B8-4C6F-BC95-0453250AA4A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildList", "BuildList\BuildList.csproj", "{E4E740FE-78A2-41DA-932F-2FF110FA90A4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2B08222D-5B2B-4679-988A-607C1D74FCF3}"
+	ProjectSection(SolutionItems) = preProject
+		..\.editorconfig = ..\.editorconfig
+		..\.gitignore = ..\.gitignore
+		..\ACKNOWLEDGEMENTS.md = ..\ACKNOWLEDGEMENTS.md
+		..\CHANGELOG.md = ..\CHANGELOG.md
+		..\LICENSE = ..\LICENSE
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{153D5257-A0B8-4C6F-BC95-0453250AA4A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{153D5257-A0B8-4C6F-BC95-0453250AA4A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{153D5257-A0B8-4C6F-BC95-0453250AA4A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{153D5257-A0B8-4C6F-BC95-0453250AA4A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4E740FE-78A2-41DA-932F-2FF110FA90A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4E740FE-78A2-41DA-932F-2FF110FA90A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4E740FE-78A2-41DA-932F-2FF110FA90A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4E740FE-78A2-41DA-932F-2FF110FA90A4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5E0F524E-2EEA-45F0-BCDB-33539EE8242D}
+	EndGlobalSection
+EndGlobal
